@@ -30,10 +30,10 @@
     <p>b: <span id="output-section-b"></span></p>
     <p>c: <span id="output-section-c"></span></p>
     <p>d: <span id="output-section-d"></span></p>
-    <form>
+    <form id='form1'>
       Type a string:
-      <input id='form1' type='text' name='input1' value='bird'>
-      <button type='submit' name='button1'>Submit</button>
+      <input id='input1' name='someText' type='text' placeholder='lower case only' required minlength='1' pattern='[a-z]{1,}'>
+      <button type='submit' name='button'>Submit</button>
     </form>
     <p>Search term = <span id="output-section-1"></span></p>
     <p>Results = <span id="output-section-2"></span></p>

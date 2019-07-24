@@ -31,23 +31,21 @@ const searchString = (yourText) => {
   return output;
 }
 
-// let searchTerm = 'de'
+// let searchTerm = 'bir'
 // let final = searchString(searchTerm);
 // console.log('Final answer =', final)
 
 $(document).ready(function() {
-    $('#output-section-a').text(dictionary[1]);
-    $('#output-section-b').text(dictionary[2]);
-    $('#output-section-c').text(dictionary[3]);
-    $('#output-section-d').text(dictionary[4]);
+    $('#output-section-a').text(JSON.stringify(dictionary[1]));
+    $('#output-section-b').text(JSON.stringify(dictionary[2]));
+    $('#output-section-c').text(JSON.stringify(dictionary[3]));
+    $('#output-section-d').text(JSON.stringify(dictionary[4]));
 
-    $('#form1').submit(function(event) {
+    $("#form1").submit(function(event) {
       event.preventDefault();
-      console.log('clicky');
-      let searchTerm = $('#form1').val();
-      console.log('searchterm=', searchTerm);
+      let searchTerm = $("#input1").val();
       let final = searchString(searchTerm);
       $('#output-section-1').text(searchTerm);
-      $('#output-section-2').text(final);
+      $('#output-section-2').text(JSON.stringify(final));
     });
   });
