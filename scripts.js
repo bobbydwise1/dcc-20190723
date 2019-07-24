@@ -8,6 +8,21 @@ For example, given the query string de and the set of strings [dog, deer, deal],
 Hint: Try preprocessing the dictionary into a more efficient data structure to speed up queries.
 */
 
+const dictionary = ['dog','deer','deal']
+
+const searchString = (yourText,searchterm) => {
+  console.log(yourText)
+  let regex = /yourText/i
+  //let output = [];
+  let output = yourText.match(regex);
+  // for (i=0; i<dictionary.length; i++) {
+  //
+  // }
+  return output;
+}
+
+let final = searchString('dog');
+console.log('answer =', final)
 
 $(document).ready(function() {
     $('#output-section-1').text('1');
