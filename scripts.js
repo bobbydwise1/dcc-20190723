@@ -10,21 +10,27 @@ Hint: Try preprocessing the dictionary into a more efficient data structure to s
 
 const dictionary = ['dog','deer','deal']
 
-const searchString = (yourText,searchterm) => {
+const searchString = (yourText) => {
   console.log(yourText)
-  let regex = /yourText/i
-  //let output = [];
-  let output = yourText.match(regex);
-  // for (i=0; i<dictionary.length; i++) {
-  //
-  // }
+  let output = [];
+  let regex = yourText;
+  console.log('regex', regex);
+  for (i=0; i<dictionary.length; i++) {
+    console.log('loop #', i)
+    console.log('dictionary term: ', dictionary[i])
+    if (dictionary[i].startsWith(regex) === true) {
+      output.push(dictionary[i]);
+    }
+    console.log('Output so far: ', output);
+  }
   return output;
 }
 
-let final = searchString('dog');
-console.log('answer =', final)
+let searchTerm = 'de'
+let final = searchString(searchTerm);
+console.log('Final answer =', final)
 
 $(document).ready(function() {
-    $('#output-section-1').text('1');
-    $('#output-section-1').text('2');
+    $('#output-section-1').text(searchTerm);
+    $('#output-section-2').text(final);
   });
